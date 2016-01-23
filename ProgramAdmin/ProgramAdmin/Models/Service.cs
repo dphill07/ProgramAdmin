@@ -59,33 +59,31 @@ namespace ProgramAdmin.Models
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = @"SELECT *
-                                            FROM ProgramErrors pe
+                                            FROM Errors e
                                             JOIN Programs p
-                                            ON pe.ProgramId = p.ProgramId
+                                            ON e.ProgramId = p.ProgramId
                                             ORDER BY TimeStamp DESC";
                 sqlConnection.Open();
 
                 SqlDataReader reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    var dto = new ProgramErrorDTO()
-                    {
-                        ErrorId = reader["ErrorId"] != DBNull.Value ? Convert.ToInt32(reader["ErrorId"]) : 0,
-                        ProgramId = reader["ProgramId"] != DBNull.Value ? Convert.ToInt32(reader["ProgramId"]) : 0,
-                        ProgramName = reader["ProgramName"].ToString(),
-                        TimeStamp = Convert.ToDateTime(reader["TimeStamp"]),
-                        ComputerName = reader["ComputerName"].ToString(),
-                        UserName = reader["UserName"].ToString(),
-                        UserDomainName = reader["UserDomainName"].ToString(),
-                        Data = reader["Data"].ToString(),
-                        HelpLink = reader["HelpLink"].ToString(),
-                        HResult = reader["HResult"].ToString(),
-                        InnerException = reader["InnerException"].ToString(),
-                        Message = reader["Message"].ToString(),
-                        Source = reader["Source"].ToString(),
-                        StackTrace = reader["StackTrace"].ToString(),
-                        TargetSite = reader["TargetSite"].ToString()
-                    };
+                    var dto = new ProgramErrorDTO();
+                    dto.ErrorId = reader["ErrorId"] != DBNull.Value ? Convert.ToInt32(reader["ErrorId"]) : 0;
+                    dto.ProgramId = reader["ProgramId"] != DBNull.Value ? Convert.ToInt32(reader["ProgramId"]) : 0;
+                    dto.ProgramName = reader["ProgramName"].ToString();
+                    dto.TimeStamp = reader["TimeStamp"] != DBNull.Value ? Convert.ToDateTime(reader["TimeStamp"]) : default(DateTime);
+                    dto.ComputerName = reader["ComputerName"].ToString();
+                    dto.UserName = reader["UserName"].ToString();
+                    dto.UserDomainName = reader["UserDomainName"].ToString();
+                    dto.Data = reader["Data"].ToString();
+                    dto.HelpLink = reader["HelpLink"].ToString();
+                    dto.HResult = reader["HResult"].ToString();
+                    dto.InnerException = reader["InnerException"].ToString();
+                    dto.Message = reader["Message"].ToString();
+                    dto.Source = reader["Source"].ToString();
+                    dto.StackTrace = reader["StackTrace"].ToString();
+                    dto.TargetSite = reader["TargetSite"].ToString();
                     errorList.Add(dto);
                 }
             }
@@ -99,9 +97,9 @@ namespace ProgramAdmin.Models
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = @"SELECT *
-                                            FROM ProgramLogs pl
+                                            FROM Logs l
                                             JOIN Programs p
-                                            ON pl.ProgramId = p.ProgramId
+                                            ON l.ProgramId = p.ProgramId
                                             ORDER BY TimeStamp DESC";
                 sqlConnection.Open();
 
@@ -222,10 +220,10 @@ namespace ProgramAdmin.Models
                 {
                     Connection = sqlConnection,
                     CommandText = @"SELECT *
-                                            FROM ProgramLogs pl
+                                            FROM Logs l
                                             JOIN Programs p
-                                            ON pl.ProgramId = p.ProgramId
-                                            WHERE pl.UserName = @UserName
+                                            ON l.ProgramId = p.ProgramId
+                                            WHERE l.UserName = @UserName
                                             ORDER BY TimeStamp DESC"
                 };
                 sqlConnection.Open();

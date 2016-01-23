@@ -71,7 +71,8 @@
     <ApplicationIcon>Resources\admin.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LoggingTools">
+    <Reference Include="LoggingTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\LoggingTools\LoggingTools\bin\Release\LoggingTools.dll</HintPath>
     </Reference>
     <Reference Include="System" />

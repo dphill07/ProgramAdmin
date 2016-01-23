@@ -132,7 +132,7 @@
                                 <telerik:RadButton Content="Get Logs By Date Range" Command="{Binding GetLogsByDateCommand}"  Grid.Row="1"/>
                             </Grid>
                         </Grid>
-                        <telerik:RadGridView ItemsSource="{Binding Logs}" GridLinesVisibility="Both" Grid.Row="1"/>
+                        <telerik:RadGridView ItemsSource="{Binding ProgramLogs}" GridLinesVisibility="Both" Grid.Row="1"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Program Errors">
@@ -143,7 +143,7 @@
                         </Grid.RowDefinitions>
                         <telerik:RadButton Content="Display Errors" Margin="10,10,10,10" Command="{Binding GetErrorsCommand}"
                                                Width="125" HorizontalAlignment="Left" Grid.Row="0"/>
-                        <telerik:RadGridView ItemsSource="{Binding Errors}" GridLinesVisibility="Both" Grid.Row="1"/>
+                        <telerik:RadGridView ItemsSource="{Binding ProgramErrors}" GridLinesVisibility="Both" Grid.Row="1"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Release Notes">

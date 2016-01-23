@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LoggingTools.dll" size="19456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LoggingTools.dll" size="20480">
       <assemblyIdentity name="LoggingTools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uoa2f/bMThmEWa8wErR9Fw9mi9RHR8Abr4AbpTj5cxw=</dsig:DigestValue>
+        <dsig:DigestValue>8j6Mw1KLKEGbGyEfjLlx/59cwrFr6a4Xm8/xMDOJvUA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>85/ZkibtkXJlGiFVQQFBFzOWdqWrUUnG0Cg3Gdy90uk=</dsig:DigestValue>
+        <dsig:DigestValue>Yf33TomB0gNG1vzZsoU+mkhRAfYgfgAfkUb+k7kLPV4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -192,7 +192,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Hd63J5OrcfLg0rA+R+88dms46gF1VEgX27vSUQlIAAA=</dsig:DigestValue>
+      <dsig:DigestValue>Oq6oFvYoRInbZb+QfD8NS7mA0PkCW42h3eZFpEsnmI4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LoggingTools_log.ldf" size="851968" writeableType="applicationData">
@@ -201,7 +201,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>irInOtq8XULi94fpu5JOMybc/QH2S5Z2a4ySAHdMS24=</dsig:DigestValue>
+      <dsig:DigestValue>wfO/Gokm+EY4Ph13l8C/vNYqPLK87WfJelNxsVA3b2g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ProgramAdmin.exe.config" size="567">
